@@ -32,6 +32,7 @@
 					<td>
 						<select name="m_no" id="m_no">
 							<c:if test="${memberList != null}">
+									<option></option>
 								<c:forEach var="member" items="${memberList}">
 									<option value="${member.m_no}">[${member.m_no}] ${member.m_name}</option>
 								</c:forEach>
