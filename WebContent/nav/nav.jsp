@@ -3,7 +3,7 @@
 <nav>
 	<ul>
 		<li><a href="">후보조회</a></li>
-		<li><a href="">투표하기</a></li>
+		<li><a href="VS?command=vote_form_action">투표하기</a></li>
 		<li><a href="">투표검수조회</a></li>
 		<li><a href="">후보자등수</a></li>
 		<li><a href="VS?command=home">홈으로</a></li>
