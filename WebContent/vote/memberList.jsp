@@ -6,12 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>후보조회</title>
-<link type="text/css" rel="stylesheet" href="./css/vote.css">
+<link type="text/css" rel="stylesheet" href="./css/vote.css?">
 </head>
 <body>
 <%@ include file="../header/header.jsp" %>
 <%@ include file="../nav/nav.jsp" %>
 	<div class="container" align="center">
+		<h1>후보조회</h1>
 		<c:if test="${memberList != null}">
 			<table>
 				<tr>
