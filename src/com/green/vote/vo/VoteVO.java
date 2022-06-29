@@ -7,7 +7,7 @@ public class VoteVO {
 	private String v_time;
 	private String v_area;
 	private String v_confirm;
-	
+
 	public String getV_jumin() {
 		return v_jumin;
 	}
@@ -43,8 +43,8 @@ public class VoteVO {
 	}
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
+
 	} 
 	
-	
-	
+
 }
