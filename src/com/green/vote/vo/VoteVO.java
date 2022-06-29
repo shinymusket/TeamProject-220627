@@ -1,6 +1,10 @@
 package com.green.vote.vo;
 
 public class VoteVO {
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
 	private String v_jumin;
 	private String v_name;
 	private String m_no;
@@ -8,6 +12,10 @@ public class VoteVO {
 	private String v_area;
 	private String v_confirm;
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
 	public String getV_jumin() {
 		return v_jumin;
 	}
@@ -43,8 +51,16 @@ public class VoteVO {
 	}
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
+<<<<<<< HEAD
 	} 
 	
 	
 	
+=======
+	}
+	
+	
+	
+
+>>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
 }
