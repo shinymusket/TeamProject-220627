@@ -33,9 +33,10 @@
 		
 		<c:forEach items="${VoteList}" var="VL">
 			<tr>
+				<!-- 이름 -->
 				<td>${VL.v_name}</td>
 
-				
+				<!-- 생년월일 -->
 				<c:set var="jumin" value="${VL.v_jumin}"/>
 				<c:set var="juminLength" value="${fn:length(jumin)}"/>
 				<c:set var="first" value="${fn:substring(jumin,0,2)}"/>
@@ -43,6 +44,9 @@
 				<c:set var="last" value="${fn:substring(jumin,4,6)}"/>
 				<td> <c:if test="${!empty jumin}"> <c:out value="19${first}년${middle}월${last}일"/> </c:if> </td>
 				
+				
+				<!-- 만 나이 구하기 -->
+
 
 				<!--  현재 날짜 정보 가져오기  -->
 				<c:set var="now" value="<%=new java.util.Date()%>" />
@@ -53,20 +57,28 @@
 				<!--db에서 가져온 주민번호 -->
 				<c:set var="age" value='${VL.v_jumin}'/>
 				
-				<c:set value="${fn:substring(age,0,2)}" var="age1"/>
+				<c:set value="${fn:substring(age,6,7)}" var="backJumin"/>
 				
-				 <c:set var = "age2" value="${100-age1+1 }"/>
+				<!-- 1900년대 사람 -->
 				
+				<c:if test="${backJumin == '1' || backJumin == '2'}"> <!-- 만약 1,2라면  -->
+					<c:set var="frontJumin" value="${fn:substring(age,0,2)}"/>
+					<c:set var="age1" value="${100-frontJumin+1}"/>
+					<c:set var="nowAge1" value="${age1+year}"/>
+					<td> <c:out value="만  ${nowAge1}세"/> </td>
+
+				</c:if>
 				
-				   <!-- 계산한나이-->
-				<c:set var = "nowAge" value="${age2+year}" />
+				<!-- 2000년대 사람  -->
 				
-				   <td> <c:out value="만 ${nowAge}세"></c:out> </td> 
-					
+				<c:if test="${backJumin == '3' || backJumin == '4'}"> <!-- 만약 3,4라면  -->
+					<c:set var="frontJumin" value="${fn:substring(age,0,2)}"/>
+					<c:set var="nowAge2" value="${year-fromtJumin+1}"/>
+					<td> <c:out value="만  ${nowAge2}세"/> </td>
+				</c:if>
+				
 
-
-
-
+				<!-- 성별 -->
 				<c:set var="type" value="${VL.v_jumin}"/>
 				<c:set var="typeLength" value="${fn:length(type)}"/>
 				<c:set var="t1" value="${fn:substring(type,6,7)}"/>
@@ -82,6 +94,7 @@
 				</td>
 				
 
+				<!-- 후보자 번호 -->
 				<td>${VL.m_no}</td>	
 				
 				<c:set var="time" value="${VL.v_time}"/>
@@ -91,7 +104,7 @@
 				<td> <c:if test="${!empty time}"> <c:out value="${first}:${last}"/> </c:if> </td>
 				
 				
-
+				<!-- 유권자 확인 -->
 				<c:if test="${VL.v_confirm eq 'N'}">
 					<td>미확인</td>
 				</c:if>
