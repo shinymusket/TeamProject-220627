@@ -5,6 +5,8 @@ import com.green.vote.controller.action.IndexAction;
 import com.green.vote.controller.action.MemberListAction;
 import com.green.vote.controller.action.VoteAction;
 import com.green.vote.controller.action.VoteFormAction;
+import com.green.vote.controller.action.VoteListAction;
+
 
 public class ActionFactory {
 	private ActionFactory() {}
@@ -24,6 +26,8 @@ public class ActionFactory {
 			action = new VoteAction();
 		} else if (command.equals("member_list_action")) { // 후보 조회
 			action = new MemberListAction();
+		} else if (command.equals("vote_List")) {  // 홈 -> 투표검수조회 페이지 이동 클래스
+			action = new VoteListAction();
 		}
 		
 		
