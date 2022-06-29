@@ -2,6 +2,7 @@ package com.green.vote.controller;
 
 import com.green.vote.controller.action.Action;
 import com.green.vote.controller.action.IndexAction;
+
 import com.green.vote.controller.action.MemberListAction;
 import com.green.vote.controller.action.VoteAction;
 import com.green.vote.controller.action.VoteFormAction;
@@ -28,9 +29,9 @@ public class ActionFactory {
 			action = new MemberListAction();
 		} else if (command.equals("vote_List")) {  // 홈 -> 투표검수조회 페이지 이동 클래스
 			action = new VoteListAction();
+			
 		}
-		
-		
+	
 		
 		return action;
 	}

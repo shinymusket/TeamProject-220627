@@ -1,18 +1,30 @@
 package com.green.vote.dao;
 
 import java.sql.Connection;
+<<<<<<< HEAD
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+=======
+<<<<<<< HEAD
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+=======
+>>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+>>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
+>>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
 
 import com.green.vote.vo.VoteVO;
 
 import DBPKG.DBManager;
 
 public class VoteDAO {
+	
 	private VoteDAO() {}
 	private static VoteDAO dao = new VoteDAO();
 	
@@ -40,14 +52,13 @@ public class VoteDAO {
 			
 		
 		} catch(Exception e) {
-			
+			e.printStackTrace();
 		} finally {
 			DBManager.close(conn, psmt);;
 		}
 		
 	}
-	
-	
+
 	//////////////////////////////////////////////////////
 	//1. 투표 검수 조회를 위한 메서드
 	
@@ -92,6 +103,7 @@ public class VoteDAO {
 		return list;
 	}
 	
+
 }
 
 
