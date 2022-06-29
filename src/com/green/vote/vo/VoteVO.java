@@ -1,6 +1,7 @@
 package com.green.vote.vo;
 
 public class VoteVO {
+
 	private String v_jumin;
 	private String v_name;
 	private String m_no;
@@ -41,10 +42,10 @@ public class VoteVO {
 	public String getV_confirm() {
 		return v_confirm;
 	}
+	
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
-
-	} 
+	}
 	
-
 }
+

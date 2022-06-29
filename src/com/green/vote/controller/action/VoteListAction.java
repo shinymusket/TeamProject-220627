@@ -16,7 +16,7 @@ public class VoteListAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 투표검수조회 홈페이지 이동 클래스
 		
-		String url ="voteList/voteList.jsp";
+		String url ="vote/voteList.jsp";
 		
 		VoteDAO dao = VoteDAO.getInstance();
 		
