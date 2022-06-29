@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.green.vote.vo.MemberVO;
+import com.green.vote.vo.MemberVOForRanking;
 import com.green.vote.vo.MemberVOForSelect;
 
 import DBPKG.DBManager;
@@ -110,6 +111,46 @@ public class MemberDAO {
 		} finally {
 			DBManager.close(conn, stmt, rs);
 		}
+		
+		return list;
+	}
+	
+	public List<MemberVOForRanking> selectMemberRankingVote() {
+		List<MemberVOForRanking> list = new ArrayList<>();
+		String sql = "SELECT m.m_no, m.m_name, COUNT(m.m_no) " + 
+				" FROM tbl_member_202005 m INNER JOIN TBL_VOTE_202005 v " + 
+				" ON m.m_no = v.m_no " + 
+				" GROUP BY m.m_no, m.m_name " + 
+				" ORDER BY COUNT(m.m_no) DESC";
+		
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		
+		try {
+			conn = DBManager.getConnection();
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				MemberVOForRanking mVo = new MemberVOForRanking();
+				mVo.setM_no(rs.getString(1));
+				mVo.setM_name(rs.getString(2));
+				mVo.setVote_count(rs.getInt(3));
+				
+				list.add(mVo);
+			}
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(conn, stmt, rs);
+		}
+		
 		
 		return list;
 	}
