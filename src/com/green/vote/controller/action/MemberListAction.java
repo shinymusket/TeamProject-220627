@@ -7,26 +7,21 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.green.vote.dao.VoteDAO;
-import com.green.vote.vo.VoteVO;
+import com.green.vote.dao.MemberDAO;
+import com.green.vote.vo.MemberVOForSelect;
 
-public class VoteListAction implements Action {
+public class MemberListAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 투표검수조회 홈페이지 이동 클래스
+		String url = "vote/memberList.jsp";
+			
+		MemberDAO dao = MemberDAO.getInstance();
+		List<MemberVOForSelect> memberList = dao.selectMemberForSelect();
 		
-		String url ="vote/voteList.jsp";
 		
-		VoteDAO dao = VoteDAO.getInstance();
-		
-		List<VoteVO> VoteList = dao.selectVoteList();
-		
-		request.setAttribute("VoteList", VoteList);
-		
+		request.setAttribute("memberList", memberList);
 		request.getRequestDispatcher(url).forward(request, response);
-		
-
 	}
 
 }

@@ -7,25 +7,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 import com.green.vote.dao.VoteDAO;
 import com.green.vote.vo.VoteVO;
+=======
+import com.green.vote.dao.MemberDAO;
+import com.green.vote.vo.MemberVOForRanking;
+>>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
 
-public class VoteListAction implements Action {
+public class MemberRankingAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 투표검수조회 홈페이지 이동 클래스
-		
-		String url ="vote/voteList.jsp";
-		
+		String url = "vote/memberRankingList.jsp";
+<<<<<<< HEAD
 		VoteDAO dao = VoteDAO.getInstance();
 		
-		List<VoteVO> VoteList = dao.selectVoteList();
+		List<VoteVO> list = dao.selectVoteList();
+=======
+		MemberDAO dao = MemberDAO.getInstance();
 		
-		request.setAttribute("VoteList", VoteList);
+		List<MemberVOForRanking> list = dao.selectMemberRankingVote();
+>>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
 		
+		request.setAttribute("memberRankingList", list);
 		request.getRequestDispatcher(url).forward(request, response);
-		
 
 	}
 

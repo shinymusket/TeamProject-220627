@@ -1,25 +1,37 @@
 package com.green.vote.vo;
 
-public class VoteVO {
-
-	private String v_jumin;
+public class VoteVOForSelect {
 	private String v_name;
+	private String v_birth;
+	private String v_age;
+	private String v_sex;
 	private String m_no;
 	private String v_time;
-	private String v_area;
 	private String v_confirm;
 	
-	public String getV_jumin() {
-		return v_jumin;
-	}
-	public void setV_jumin(String v_jumin) {
-		this.v_jumin = v_jumin;
-	}
 	public String getV_name() {
 		return v_name;
 	}
 	public void setV_name(String v_name) {
 		this.v_name = v_name;
+	}
+	public String getV_birth() {
+		return v_birth;
+	}
+	public void setV_birth(String v_birth) {
+		this.v_birth = v_birth;
+	}
+	public String getV_age() {
+		return v_age;
+	}
+	public void setV_age(String v_age) {
+		this.v_age = v_age;
+	}
+	public String getV_sex() {
+		return v_sex;
+	}
+	public void setV_sex(String v_sex) {
+		this.v_sex = v_sex;
 	}
 	public String getM_no() {
 		return m_no;
@@ -33,21 +45,10 @@ public class VoteVO {
 	public void setV_time(String v_time) {
 		this.v_time = v_time;
 	}
-	public String getV_area() {
-		return v_area;
-	}
-	public void setV_area(String v_area) {
-		this.v_area = v_area;
-	}
 	public String getV_confirm() {
 		return v_confirm;
 	}
-	
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
-
 	}
-
-	
 }
-

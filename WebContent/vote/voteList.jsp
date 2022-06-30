@@ -42,7 +42,7 @@
 				<c:set var="first" value="${fn:substring(jumin,0,2)}"/>
 				<c:set var="middle" value="${fn:substring(jumin,2,4)}"/>
 				<c:set var="last" value="${fn:substring(jumin,4,6)}"/>
-				<td> <c:if test="${!empty jumin}"> <c:out value="19${first}년${middle}월${last}일"/> </c:if> </td>
+				<td> <c:if test="${!empty jumin}"> <c:out value="19${first}년${middle}월${last}일생"/> </c:if> </td>
 				
 				
 				<!-- 만 나이 구하기 -->

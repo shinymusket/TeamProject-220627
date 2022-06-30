@@ -9,24 +9,20 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.green.vote.dao.VoteDAO;
 import com.green.vote.vo.VoteVO;
+import com.green.vote.vo.VoteVOForSelect;
 
-public class VoteListAction implements Action {
+public class VoteExaminationAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 투표검수조회 홈페이지 이동 클래스
-		
-		String url ="vote/voteList.jsp";
-		
+		String url = "vote/voteExamination.jsp";
 		VoteDAO dao = VoteDAO.getInstance();
 		
-		List<VoteVO> VoteList = dao.selectVoteList();
+		List<VoteVO> list = dao.selectVoteList();
 		
-		request.setAttribute("VoteList", VoteList);
 		
+		request.setAttribute("voteExaminationList", list);
 		request.getRequestDispatcher(url).forward(request, response);
-		
-
 	}
 
 }
