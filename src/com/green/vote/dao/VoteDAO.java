@@ -1,31 +1,13 @@
 package com.green.vote.dao;
 
 import java.sql.Connection;
-<<<<<<< HEAD
 import java.sql.PreparedStatement;
 import java.sql.Statement;
-=======
-<<<<<<< HEAD
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-=======
-<<<<<<< HEAD
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-=======
->>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
->>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
+
 
 import com.green.vote.vo.VoteVO;
 

@@ -2,10 +2,6 @@ package com.green.vote.controller;
 
 import com.green.vote.controller.action.Action;
 import com.green.vote.controller.action.IndexAction;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
 import com.green.vote.controller.action.MemberListAction;
 import com.green.vote.controller.action.VoteAction;
 import com.green.vote.controller.action.VoteFormAction;
