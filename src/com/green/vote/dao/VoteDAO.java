@@ -87,9 +87,9 @@ public class VoteDAO {
 				
 				String confirm = null;
 				
-				if(confirms.equals("Y")) {  // 유권자 확인
+				if(confirms.equalsIgnoreCase("Y")) {  // 유권자 확인
 					confirm ="확인";
-				}else if (confirms.equals("N")) {  // 유권자 미확인
+				}else if (confirms.equalsIgnoreCase("N")) {  // 유권자 미확인
 					confirm ="미확인";
 				}
 				
@@ -214,7 +214,10 @@ public class VoteDAO {
 
 
 
-	public void insertVote(VoteVO vVo) { // 투표하기
+
+
+	//투표하기
+	public void insertVote(VoteVO vVo) {
 		String sql = "INSERT INTO TBL_VOTE_202005 VALUES(?, ?, ?, ?, ?, ?)";
 		Connection conn = null;
 		PreparedStatement psmt = null;
@@ -239,7 +242,9 @@ public class VoteDAO {
 		DBManager.close(conn, psmt);
 		}
 
-		}
+	}
+	
+	
 	
 	
 	
