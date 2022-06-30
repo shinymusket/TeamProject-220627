@@ -1,13 +1,18 @@
 package com.green.vote.vo;
 
 public class VoteVO {
-
+	
 	private String v_jumin;
 	private String v_name;
 	private String m_no;
 	private String v_time;
 	private String v_area;
 	private String v_confirm;
+	
+	private String birth;
+	private int age;
+	private String sex;
+	
 	
 	public String getV_jumin() {
 		return v_jumin;
@@ -42,12 +47,29 @@ public class VoteVO {
 	public String getV_confirm() {
 		return v_confirm;
 	}
-	
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
-
 	}
-
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
 	
-}
+	
+	
 
+}

@@ -13,7 +13,7 @@ public class VoteAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = ""; // 투표검수 조회 Action
+		String url = "VS?command=vote_List"; // 투표검수 조회 Action
 		String v_jumin = request.getParameter("v_jumin");
 		String v_name = request.getParameter("v_name");
 		String m_no = request.getParameter("m_no");
