@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>투표하기</title>
-<link type="text/css" rel="stylesheet" href="./css/vote.css">
+<link type="text/css" rel="stylesheet" href="./css/vote.css?">
 </head>
 <body>
 <%@ include file="../header/header.jsp" %>

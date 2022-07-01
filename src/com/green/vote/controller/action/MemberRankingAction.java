@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.green.vote.dao.VoteDAO;
 import com.green.vote.vo.VoteVO;
+import com.green.vote.dao.MemberDAO;
+import com.green.vote.vo.MemberVOForRanking;
 
 
 public class MemberRankingAction implements Action {

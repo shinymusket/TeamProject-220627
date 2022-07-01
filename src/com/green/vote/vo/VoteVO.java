@@ -8,12 +8,12 @@ public class VoteVO {
 	private String v_time;
 	private String v_area;
 	private String v_confirm;
-	
+
 	private String birth;
 	private int age;
 	private String sex;
 	
-	
+
 	public String getV_jumin() {
 		return v_jumin;
 	}
@@ -50,6 +50,7 @@ public class VoteVO {
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
 	}
+
 	public String getBirth() {
 		return birth;
 	}
@@ -69,7 +70,7 @@ public class VoteVO {
 		this.sex = sex;
 	}
 	
-	
+
 	
 
 }
