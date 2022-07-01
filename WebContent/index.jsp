@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>홈페이지</title>
-<link type="text/css" rel="stylesheet" href="css/vote.css?">
+<link type="text/css" rel="stylesheet" href="css/vote.css?12344444">
 </head>
 <body>
 <%@ include file="header/header.jsp" %>
