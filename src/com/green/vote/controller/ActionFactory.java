@@ -2,26 +2,15 @@ package com.green.vote.controller;
 
 import com.green.vote.controller.action.Action;
 import com.green.vote.controller.action.IndexAction;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
->>>>>>> 62d62c79e8b909c68e2e6785c0c6618c012ba147
->>>>>>> member3
+
 import com.green.vote.controller.action.MemberListAction;
 import com.green.vote.controller.action.MemberRankingAction;
 import com.green.vote.controller.action.VoteAction;
 import com.green.vote.controller.action.VoteExaminationAction;
 import com.green.vote.controller.action.VoteFormAction;
-<<<<<<< HEAD
-=======
-import com.green.vote.controller.action.VoteListAction;
->>>>>>> 50dd2f48c37d2f44a8c660e11dadfe4ea81f26a7
-=======
+
+
 import com.green.vote.controller.action.VoteListAction;
 
 public class ActionFactory {

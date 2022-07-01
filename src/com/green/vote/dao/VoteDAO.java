@@ -3,11 +3,9 @@ package com.green.vote.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
-=======
 import java.sql.ResultSet;
 import java.sql.Statement;
-<<<<<<< HEAD
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,43 +13,8 @@ import java.util.List;
 
 import com.green.vote.vo.VoteVO;
 import com.green.vote.vo.VoteVOForSelect;
-=======
-=======
-=======
-<<<<<<< HEAD
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-=======
-<<<<<<< HEAD
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-=======
->>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
->>>>>>> 62d62c79e8b909c68e2e6785c0c6618c012ba147
->>>>>>> member3
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 786cd2957d36b9cde2758fd2e40ec173c2abce0a
->>>>>>> 818c2ba5ca562288cbe6d3103d4a545f2c5481c4
->>>>>>> 4ba5cae3352f2f019deb3ab7a161a779d5abe615
->>>>>>> 62d62c79e8b909c68e2e6785c0c6618c012ba147
->>>>>>> member3
 
-import com.green.vote.vo.VoteVO;
->>>>>>> 50dd2f48c37d2f44a8c660e11dadfe4ea81f26a7
+
 
 import DBPKG.DBManager;
 
@@ -415,38 +378,5 @@ public class VoteDAO {
 		return sex;
 	}
 
-
-
-
-
-	//투표하기
-	public void insertVote(VoteVO vVo) {
-		String sql = "INSERT INTO TBL_VOTE_202005 VALUES(?, ?, ?, ?, ?, ?)";
-		Connection conn = null;
-		PreparedStatement psmt = null;
-
-		try {
-		conn = DBManager.getConnection();
-		psmt  = conn.prepareStatement(sql);
-
-		psmt.setString(1, vVo.getV_jumin());
-		psmt.setString(2, vVo.getV_name());
-		psmt.setString(3, vVo.getM_no());
-		psmt.setString(4, vVo.getV_time());
-		psmt.setString(5, vVo.getV_area());
-		psmt.setString(6, vVo.getV_confirm());
-
-		psmt.executeUpdate();
-
-
-		} catch(Exception e) {
-
-		} finally {
-		DBManager.close(conn, psmt);
-		}
-
-	}
-	
-	
 	
 }
