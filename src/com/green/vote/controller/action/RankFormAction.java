@@ -7,21 +7,22 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.green.vote.dao.VoteDAO;
-import com.green.vote.vo.VoteVO;
+import com.green.vote.dao.RankDao;
+import com.green.vote.vo.RankVo;
 
-public class VoteExaminationAction implements Action {
+public class RankFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "vote/voteExamination.jsp";
-		VoteDAO dao = VoteDAO.getInstance();
+		String url = "vote/rank.jsp";
 		
-
-		List<VoteVO> list = dao.selectVoteList();
+		RankDao dao = RankDao.getInstance();
+		List<RankVo> list = dao.VoteRank();
 		
-		request.setAttribute("voteExaminationList", list);
+		request.setAttribute("VoteRank", list);
+		
 		request.getRequestDispatcher(url).forward(request, response);
+		
 	}
 
 }
